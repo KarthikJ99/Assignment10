@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+Retailer List:
+<script>
+
+    fetch("jpa/retailer/list")
+        .then(response => response.json())
+        .then(
+            response => response.map(retailer => document.write(`<li> ${retailer.name} </li>`)),
+             response.map(retailer => document.write(`<li> ${retailer.age} </li>`)),
+            response.map(retailer => document.write(`<li> ${retailer.email} </li>`)),
+            response.map(retailer => document.write(`<li> ${retailer.id} </li>`))
+            );
+
+</script>
+
+</html>
